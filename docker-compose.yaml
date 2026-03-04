@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pedronext
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Add your env vars below (or use an .env file)
+      # - NEXT_PUBLIC_API_URL=http://your-api-url
+    restart: unless-stopped

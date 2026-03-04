@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "rtl": false,
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registries": {
+    "@jolyui": "https://www.jolyui.dev/r/{name}.json",
+    "@gooseui": "https://gooseui.pro/r/{name}.json",
+    "@aliimam": "https://aliimam.in/r/{name}.json",
+    "@animate-ui": "https://animate-ui.com/r/{name}.json",
+    "@chamaac": "https://chamaac.com/r/{name}.json",
+    "@forgeui": "https://forgeui.in/r/{name}.json"
+  }
+}
