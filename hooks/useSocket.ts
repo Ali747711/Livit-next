@@ -13,7 +13,11 @@ export const useSocket = (): WebSocket | null => {
     const token = getJwtToken();
     if (!token) return;
 
-    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:3005";
+    const rawWsUrl = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:3005";
+    const wsUrl =
+      typeof window !== "undefined" && window.location.protocol === "https:"
+        ? rawWsUrl.replace(/^ws:\/\//, "wss://")
+        : rawWsUrl;
 
     const connect = () => {
       const ws = new WebSocket(`${wsUrl}?token=${token}`);
