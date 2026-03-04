@@ -19,6 +19,7 @@ import {
   Search01Icon,
   ChevronsLeftRight,
 } from "@hugeicons/core-free-icons";
+import { getImageUrl } from "@/lib/utils";
 
 interface NavItem {
   label: string;
@@ -46,6 +47,7 @@ const AdminLayout = ({ children, title = "Dashboard" }: AdminLayoutProps) => {
   const user = useReactiveVar(userVar);
   const [open, setOpen] = useState(false);
 
+  const imageUrl = getImageUrl(user.memberImage as string);
   if (
     typeof window !== "undefined" &&
     user._id &&
@@ -187,7 +189,7 @@ const AdminLayout = ({ children, title = "Dashboard" }: AdminLayoutProps) => {
               <img
                 src={
                   user.memberImage
-                    ? `${process.env.NEXT_PUBLIC_GRAPHQL_URL_IMG}${user.memberImage}`
+                    ? `${imageUrl}`
                     : "/img/profiles/avatardef.png"
                 }
                 alt={user.memberNick}
