@@ -294,7 +294,7 @@ const AdminLayout = ({ children, title = "Dashboard" }: AdminLayoutProps) => {
               <img
                 src={
                   user.memberImage
-                    ? `${process.env.NEXT_PUBLIC_GRAPHQL_URL_IMG}${user.memberImage}`
+                    ? `${imageUrl}`
                     : "/img/profiles/avatardef.png"
                 }
                 alt={user.memberNick}
