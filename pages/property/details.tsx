@@ -53,8 +53,6 @@ const defaultComment = {
   search: { commentRefId: "" },
 };
 
-const displayFont = "Playfair Display, Georgia, serif";
-
 const PropertyDetails: NextPage = ({
   initialComment = defaultComment,
   ...props

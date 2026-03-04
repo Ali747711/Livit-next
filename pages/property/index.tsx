@@ -324,7 +324,6 @@ const PropertyPage: NextPage = ({
                       className="text-xl font-bold"
                       style={{
                         color: "#222831",
-                        fontFamily: "Playfair Display, Georgia, serif",
                       }}
                     >
                       No properties found
